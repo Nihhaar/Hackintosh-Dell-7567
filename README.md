@@ -39,8 +39,10 @@ sudo diskutil rename "Install macOS High Sierra" install_osx
   - check *"Metal"* from Themes
   - Check *"OsxAptioFixDrv2-64"* from Drivers64UEFI
 
+
 **Configure clover**
   - Place the files from given zip file into your *EFI/Clover* folder in usb accordingly.
+
 
 ### Booting USB and Installing macOS
 
@@ -53,8 +55,9 @@ sudo diskutil rename "Install macOS High Sierra" install_osx
         <pre>"/Volumes/Image Volume/Install macOS High Sierra.app/Contents/Resources/startosinstall" --volume <b>the_target_volume</b> --converttoapfs NO --agreetolicense
         </pre>
       - Choose *the_target_volume* depending on how you named your partition (eg. /Volumes/macOS)
-  - System automatically reboots, again boot into clover, but now select 'Install macOS' instead of 'install_osx'
+  - System now automatically reboots, boot again into clover, but now select 'Install macOS High Sierra' instead of 'install_osx'
   
+
 ### Post Installation
 
 **Download and Install clover bootloader**
@@ -68,6 +71,7 @@ sudo diskutil rename "Install macOS High Sierra" install_osx
   - Check *"EmuVariableUefi-64.efi"* from Drivers64UEFI
   - Select *"Install RC scripts on target volume"*
 
+
 **Configure Clover and your System**
   - Replace the existing config.plist with the config.plist from *“Clover Post-Install Files”*
   - Add the two EFI drivers from *“Clover Post-Install Files”/drivers64UEFI* to /EFI/CLOVER/drivers64UEFI, and remove VBoxHfs-64.efi from /EFI/CLOVER/drivers64UEFI
@@ -78,6 +82,7 @@ sudo diskutil rename "Install macOS High Sierra" install_osx
   - Rebuild the cache using `sudo kextcache -i /`
   - Reboot
   
+
 **Disable Hibernation**
 ```bash
 sudo pmset -a hibernatemode 0
@@ -88,7 +93,9 @@ sudo pmset -a autopoweroff 0
 sudo pmset -a powernap 0
 ```
 
+
 ### Required Files
+[Download](https://github.com/Nihhaar/Hackintosh-Dell7567/raw/master/Archive/Hackintosh-Dell7567-Nihhaar.zip)
 
 ### Notes
 

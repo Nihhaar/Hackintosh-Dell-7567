@@ -142,8 +142,6 @@
 	</dict>
 	<key>Boot</key>
 	<dict>
-		<key>Arguments</key>
-		<string>-disablegfxfirmware</string>
 		<key>Debug</key>
 		<false/>
 		<key>DefaultLoader</key>

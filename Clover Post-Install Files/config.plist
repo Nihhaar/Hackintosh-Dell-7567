@@ -128,20 +128,12 @@
 			</array>
 		</dict>
 		<key>SSDT</key>
-		<dict>
-			<key>Generate</key>
-			<dict>
-				<key>CStates</key>
-				<false/>
-				<key>PStates</key>
-				<false/>
-				<key>PluginType</key>
-				<true/>
-			</dict>
-		</dict>
+		<dict/>
 	</dict>
 	<key>Boot</key>
 	<dict>
+		<key>Arguments</key>
+		<string>igfxfw=1</string>
 		<key>Debug</key>
 		<false/>
 		<key>DefaultLoader</key>
@@ -413,10 +405,6 @@
 	</dict>
 	<key>SMBIOS</key>
 	<dict>
-		<key>ChassisAssetTag</key>
-		<string>MacBook-Aluminum</string>
-		<key>ChassisManufacturer</key>
-		<string>Apple Inc.</string>
 		<key>Family</key>
 		<string>MacBook Pro</string>
 		<key>Manufacturer</key>
@@ -424,7 +412,7 @@
 		<key>Mobile</key>
 		<true/>
 		<key>ProductName</key>
-		<string>MacBookPro14,1</string>
+		<string>MacBookPro13,1</string>
 	</dict>
 	<key>SystemParameters</key>
 	<dict>

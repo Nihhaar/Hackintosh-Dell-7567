@@ -125,6 +125,42 @@
 					FCBCUlRYAg==
 					</data>
 				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>change _STA to XSTA in device GPI0 (TouchPad I2C)</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>
+					X1NUQQ==
+					</data>
+					<key>Replace</key>
+					<data>
+					WFNUQQ==
+					</data>
+					<key>TgtBridge</key>
+					<data>
+					R1BJMA==
+					</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>change _CRS to XCRS in device TPD1 (TouchPad I2C)</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>
+					X0NSUw==
+					</data>
+					<key>Replace</key>
+					<data>
+					WENSUw==
+					</data>
+					<key>TgtBridge</key>
+					<data>
+					VFBEMQ==
+					</data>
+				</dict>
 			</array>
 		</dict>
 		<key>SSDT</key>
@@ -409,8 +445,6 @@
 		<string>MacBook Pro</string>
 		<key>Manufacturer</key>
 		<string>Apple Inc.</string>
-		<key>Mobile</key>
-		<true/>
 		<key>ProductName</key>
 		<string>MacBookPro13,1</string>
 	</dict>

@@ -169,7 +169,7 @@
 	<key>Boot</key>
 	<dict>
 		<key>Arguments</key>
-		<string>igfxfw=1</string>
+		<string>-disablegfxfirmware</string>
 		<key>Debug</key>
 		<false/>
 		<key>DefaultLoader</key>

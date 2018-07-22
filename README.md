@@ -38,10 +38,8 @@ sudo diskutil rename "Install macOS High Sierra" install_osx
   - Check *"Install for UEFI booting only"*, *"Install Clover in the ESP"* will automatically select
   - check *"Metal"* from Themes
   - Check *"OsxAptioFixDrv2-64"* from Drivers64UEFI
-
-
-**Configure clover**
-  - Place the files from given zip file into your *EFI/Clover* folder in usb accordingly.
+  - Install Clover
+  - Place the files from given zip file (from this repo) into your *EFI/Clover* folder in usb accordingly.
 
 
 ### Booting USB and Installing macOS
@@ -78,6 +76,7 @@ sudo diskutil rename "Install macOS High Sierra" install_osx
   - Add the included SSDTs in *patched* folder into your *"/EFI/CLOVER/ACPI/patched"* folder
   - Install all of the kexts that are located in *Clover Post-Install Files/"Clover/Other kexts"* folder to /Library/Extensions using your favorite kext installer.
   - Copy files from given *"/Library/LaunchDaemons"* folder to /Library/LaunchDaemons and *"/usr/bin"* folder to /usr/bin
+  - Run `Scripts/fixPermissions.sh` as root to fix kext permissions
   - Reboot the laptop and boot with '-f'command line option (press space at clover)
   - Rebuild the cache using `sudo kextcache -i /`
   - Reboot

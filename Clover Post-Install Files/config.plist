@@ -113,6 +113,20 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
+					<string>change GPRW to XPRW (add-on SSDT-PRW.aml)</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>
+					R1BSVwI=
+					</data>
+					<key>Replace</key>
+					<data>
+					WFBSVwI=
+					</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
 					<string>Rename  Method BRT6 to BRTX (add-on  SSDT-BRT6.aml)</string>
 					<key>Disabled</key>
 					<false/>

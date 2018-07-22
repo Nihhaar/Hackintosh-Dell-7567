@@ -196,38 +196,6 @@
 				<string>change 15 port limit to 26 in XHCI kext</string>
 				<key>Find</key>
 				<data>
-				g72M/v//EA==
-				</data>
-				<key>MatchOS</key>
-				<string>10.11.x</string>
-				<key>Name</key>
-				<string>com.apple.driver.usb.AppleUSBXHCIPCI</string>
-				<key>Replace</key>
-				<data>
-				g72M/v//Gw==
-				</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>change 15 port limit to 26 in XHCI kext</string>
-				<key>Find</key>
-				<data>
-				g710////EA==
-				</data>
-				<key>MatchOS</key>
-				<string>10.12.x</string>
-				<key>Name</key>
-				<string>com.apple.driver.usb.AppleUSBXHCIPCI</string>
-				<key>Replace</key>
-				<data>
-				g710////Gw==
-				</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>change 15 port limit to 26 in XHCI kext</string>
-				<key>Find</key>
-				<data>
 				g32MEA==
 				</data>
 				<key>MatchOS</key>
@@ -247,12 +215,26 @@
 				g32UDw+DlwQ=
 				</data>
 				<key>MatchOS</key>
-				<string>10.13.4</string>
+				<string>10.13.4,10.13.5</string>
 				<key>Name</key>
 				<string>com.apple.driver.usb.AppleUSBXHCI</string>
 				<key>Replace</key>
 				<data>
 				g32UGg+DlwQ=
+				</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>change 15 port limit to 26 in XHCI kext for 10.13.6 (credit Canvas)</string>
+				<key>Find</key>
+				<data>
+				g32IDw+DpwQ=
+				</data>
+				<key>Name</key>
+				<string>com.apple.driver.usb.AppleUSBXHCI</string>
+				<key>Replace</key>
+				<data>
+				g32IGg+DpwQ=
 				</data>
 			</dict>
 		</array>

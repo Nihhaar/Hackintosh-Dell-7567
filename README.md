@@ -96,9 +96,24 @@ sudo pmset -a powernap 0
 ### Required Files
 [Download](https://github.com/Nihhaar/Hackintosh-Dell7567/raw/master/Archive/Hackintosh-Dell7567-Nihhaar.zip)
 
-### Notes
-
 ### Troubleshooting
+**Backlight level is not persisting across reboot**
+ - Boot into macOS
+ - Mount EFI folder and delete nvram.plist in the folder
+ - Clear nvram variables from terminal using `sudo nvram -c`
+ - Reboot into Clover
+ - Open Clover UEFI Shell and type following commands:
+   ```bash
+   FS0: 
+   cd EFI 
+   dmpstore -all -s dmpvars.txt
+   ```
+ - Find the GUID of the `backlight-level` variable (same for all macOS nvram variables) and type the following command in the same shell:
+   ```bash
+   dmpstore -d -guid <GUID of macOS variables> 
+   exit
+   ```
+ - Reboot
 
 ### References
  - https://www.tonymacx86.com/threads/guide-dell-inspiron-15-7567-and-similar-near-full-functionality.234988/
@@ -108,3 +123,4 @@ sudo pmset -a powernap 0
  - https://www.tonymacx86.com/threads/guide-patching-dsdt-ssdt-for-laptop-backlight-control.152659/
  - https://www.tonymacx86.com/threads/guide-creating-a-custom-ssdt-for-usbinjectall-kext.211311/
  - https://www.tonymacx86.com/threads/guide-native-power-management-for-laptops.175801/
+ - https://www.tonymacx86.com/threads/solved-backlight-turns-to-full-brightness-after-sleep-or-restart.192065/page-4

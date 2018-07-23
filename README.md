@@ -1,20 +1,30 @@
 # Personal Hackintosh Guide/Instructions for Dell 7567
 
-### Credits
-   - [Rehabman](https://www.tonymacx86.com/members/rehabman.429483/)
-   - [AGuyWhoIsBored](https://www.tonymacx86.com/members/aguywhoisbored.1105835/)
+### Download Required Files
+[Download](https://github.com/Nihhaar/Hackintosh-Dell7567/raw/master/Archive/Hackintosh-Dell7567-Nihhaar.zip)
+
+### Notes
+ - Working hackintosh for 10.13.x (including 10.13.6)
+ - No support for mojave currently
+ - No support for 4k *(I don't have a 4k variant)*. But I think it's just `my files` + `CoreDisplayFixup.kext` + `DVMT patch`
+ - HDMI doesn't work on this hack because it is connected to nvidia card and we disabled it
+ - Any other issues? Just open an issue in this repo!
+
+### Known Bugs
+ - Stock wifi doesn't work (needs to be replaced with a compatible one)
+ - SDCard reader
+ - 2.1 audio (2.0 works)
+ - Headphone's internal microphone
 
 ### Specs
-   - Intel i7-7700HQ CPU
-   - Intel HD Graphics 630 / nVidia GTX 1050 Ti
-   - 16GB 2400MHz DDR4 RAM
-   - 15.6” 1080p IPS Display
-   - 128GB SanDisk M.2 SSD (SATA)
-   - 1TB 5400RPM Western Digital HDD
+ - Intel i7-7700HQ CPU
+ - Intel HD Graphics 630 / nVidia GTX 1050 Ti
+ - 16GB 2400MHz DDR4 RAM
+ - 15.6” 1080p IPS Display
+ - 128GB SanDisk M.2 SSD (SATA)
+ - 1TB 5400RPM Western Digital HDD
 
-### Creating macOS HighSierra USB
-
-I personally went ahead and used USB 3.0, but I had to use [port limit patch](https://raw.githubusercontent.com/RehabMan/OS-X-USB-Inject-All/master/config_patches.plist) to reach the installer which is included in my config.plist.
+## Creating macOS HighSierra USB
 
 ```bash
 # Figure out identifier for of your usb (/dev/diskX, for example)
@@ -42,7 +52,7 @@ sudo diskutil rename "Install macOS High Sierra" install_osx
   - Place the files from given zip file (from this repo) into your *EFI/Clover* folder in usb accordingly.
 
 
-### Booting USB and Installing macOS
+## Booting USB and Installing macOS
 
   - Press F12 repeatedly for one-time boot-menu and select your usb
   - Choose *install_osx* in clover (preferably boot with -v option)
@@ -56,7 +66,7 @@ sudo diskutil rename "Install macOS High Sierra" install_osx
   - System now automatically reboots, boot again into clover, but now select 'Install macOS High Sierra' instead of 'install_osx'
   
 
-### Post Installation
+## Post Installation
 
 **Download and Install clover bootloader**
   - Download [clover](https://bitbucket.org/RehabMan/clover/downloads/)
@@ -77,10 +87,9 @@ sudo diskutil rename "Install macOS High Sierra" install_osx
   - Install all of the kexts that are located in *Clover Post-Install Files/"Clover/Other kexts"* folder to /Library/Extensions using your favorite kext installer.
   - Copy files from given *"/Library/LaunchDaemons"* folder to /Library/LaunchDaemons and *"/usr/bin"* folder to /usr/bin
   - Run `Scripts/fixPermissions.sh` as root to fix kext permissions
-  - Reboot the laptop and boot with '-f'command line option (press space at clover)
+  - Reboot the laptop and boot with '-f' command line option (press space at clover)
   - Rebuild the cache using `sudo kextcache -i /`
-  - Reboot
-  
+  - Reboot  
 
 **Disable Hibernation**
 ```bash
@@ -92,12 +101,8 @@ sudo pmset -a autopoweroff 0
 sudo pmset -a powernap 0
 ```
 
-
-### Required Files
-[Download](https://github.com/Nihhaar/Hackintosh-Dell7567/raw/master/Archive/Hackintosh-Dell7567-Nihhaar.zip)
-
-### Troubleshooting
-**Backlight level is not persisting across reboot**
+## Troubleshooting
+**1) Backlight level is not persisting across reboot**
  - Boot into macOS
  - Mount EFI folder and delete nvram.plist in the folder
  - Clear nvram variables from terminal using `sudo nvram -c`
@@ -113,9 +118,21 @@ sudo pmset -a powernap 0
    dmpstore -d -guid <GUID of macOS variables> 
    exit
    ```
- - Reboot
+ - Reboot  
 
-### References
+**2) Sound is not working**
+ - Some higher versions of AppleALC doesn't seem to work properly. So install a tested version like 1.2.8
+ - Make sure Lilu is installed & AppleALC is loaded after Lilu: If you use /L/E for kexts, make sure you have LiluFriend.kext
+ - If you have FakePCIID kexts, remove them. These patches are already included in AppleALC(atleast in 1.2.8) and are not needed
+ - Make sure kexts are loading properly. Sometimes kexts fail to load due to improper permissions. Use `Scripts/fixPersmissions.sh`
+ - If none of the above worked, try posting in forums like tonymacx86.com  
+
+## Credits
+ - [Rehabman](https://www.tonymacx86.com/members/rehabman.429483/)
+ - [AGuyWhoIsBored](https://www.tonymacx86.com/members/aguywhoisbored.1105835/)
+ - [Me](https://www.github.com/Nihhaar/) *(For putting this together & adding many required patches(see commits))*
+
+## References
  - https://www.tonymacx86.com/threads/guide-dell-inspiron-15-7567-and-similar-near-full-functionality.234988/
  - https://www.tonymacx86.com/threads/guide-booting-the-os-x-installer-on-laptops-with-clover.148093/
  - https://www.tonymacx86.com/threads/guide-avoid-apfs-conversion-on-high-sierra-update-or-fresh-install.232855/

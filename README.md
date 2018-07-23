@@ -1,5 +1,8 @@
 # Personal Hackintosh Guide/Instructions for Dell 7567
 
+### Screenshot
+![macOS High Sierra - 10.13.6](https://raw.githubusercontent.com/Nihhaar/Hackintosh-Dell-7567/master/Assets/Screenshot.png)
+
 ### Download Required Files
 [Download](https://github.com/Nihhaar/Hackintosh-Dell7567/raw/master/Archive/Hackintosh-Dell7567-Nihhaar.zip)
 

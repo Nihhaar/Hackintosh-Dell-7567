@@ -124,7 +124,7 @@ sudo pmset -a powernap 0
 
 **2) Sound is not working**
  - Some higher versions of AppleALC doesn't seem to work properly. So install a tested version like 1.2.8
- - Make sure Lilu is installed & AppleALC is loaded after Lilu: If you use /L/E for kexts, make sure you have LiluFriend.kext
+ - Make sure Lilu is installed & AppleALC is loaded after Lilu: If you use /L/E for kexts, make sure you have LiluFriend.kext and correctly configured
  - If you have FakePCIID kexts, remove them. These patches are already included in AppleALC(atleast in 1.2.8) and are not needed
  - Make sure kexts are loading properly. Sometimes kexts fail to load due to improper permissions. Use `Scripts/fixPersmissions.sh`
  - If none of the above worked, try posting in forums like tonymacx86.com  

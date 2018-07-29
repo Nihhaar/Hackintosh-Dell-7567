@@ -4,7 +4,7 @@
 ![macOS High Sierra - 10.13.6](https://raw.githubusercontent.com/Nihhaar/Hackintosh-Dell-7567/master/Assets/Screenshot.png)
 
 ### Download Required Files
-[Download](https://github.com/Nihhaar/Hackintosh-Dell7567/raw/master/Archive/Hackintosh-Dell7567-Nihhaar.zip)
+Check [releases](https://github.com/Nihhaar/Hackintosh-Dell7567/releases)
 
 ### Notes
  - Working hackintosh for 10.13.x (including 10.13.6)
@@ -17,7 +17,6 @@
  - Stock wifi doesn't work (needs to be replaced with a compatible one)
  - SDCard reader
  - 2.1 audio (2.0 works)
- - Headphone's internal microphone
 
 ### Specs
  - Intel i7-7700HQ CPU

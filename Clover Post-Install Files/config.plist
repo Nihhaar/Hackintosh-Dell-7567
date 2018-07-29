@@ -221,6 +221,10 @@
 	</dict>
 	<key>GUI</key>
 	<dict>
+		<key>Hide</key>
+		<array>
+			<string>Preboot</string>
+		</array>
 		<key>Language</key>
 		<string>en:0</string>
 		<key>Scan</key>

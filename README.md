@@ -7,7 +7,7 @@
 Check [releases](https://github.com/Nihhaar/Hackintosh-Dell7567/releases)
 
 ### Notes
- - Working hackintosh for 10.14 (Mojave) and 10.13.x
+ - Working hackintosh for 10.14 (Mojave) and 10.13.x (High Sierra)
  - No support for 4k *(I don't have a 4k variant)*. But I think it's just `my files` + `CoreDisplayFixup.kext` + `DVMT patch`
  - HDMI doesn't work on this hack because it is connected to nvidia card and we disabled it
  - Any other issues? Just open an issue in this repo!

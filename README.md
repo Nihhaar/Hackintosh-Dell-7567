@@ -48,7 +48,7 @@ sudo diskutil rename "Install macOS High Sierra" install_osx
   - Select *Customize*
   - Check *"Install for UEFI booting only"*, *"Install Clover in the ESP"* will automatically select
   - check *"Metal"* from Themes
-  - Check *"OsxAptioFixDrv2-64"* from Drivers64UEFI
+  - Check *"OsxAptioFix3Drv-64"* from Drivers64UEFI
   - Install Clover
   - Place the files from given zip file (from this repo) into your *EFI/Clover* folder in usb accordingly.
 
@@ -77,7 +77,7 @@ sudo diskutil rename "Install macOS High Sierra" install_osx
   - Select *Customize*
   - Check *"Install for UEFI booting only"*, *"Install Clover in the ESP"* will automatically select
   - check *"Metal"* from Themes
-  - Check *"OsxAptioFixDrv2-64"* from Drivers64UEFI
+  - Check *"OsxAptioFix3Drv-64"* from Drivers64UEFI
   - Check *"EmuVariableUefi-64.efi"* from Drivers64UEFI
   - Select *"Install RC scripts on target volume"*
 

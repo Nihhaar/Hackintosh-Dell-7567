@@ -7,8 +7,7 @@
 Check [releases](https://github.com/Nihhaar/Hackintosh-Dell7567/releases)
 
 ### Notes
- - Working hackintosh for 10.13.x (including 10.13.6)
- - No support for mojave currently
+ - Working hackintosh for 10.14 (Mojave) and 10.13.x
  - No support for 4k *(I don't have a 4k variant)*. But I think it's just `my files` + `CoreDisplayFixup.kext` + `DVMT patch`
  - HDMI doesn't work on this hack because it is connected to nvidia card and we disabled it
  - Any other issues? Just open an issue in this repo!
@@ -59,12 +58,13 @@ sudo diskutil rename "Install macOS High Sierra" install_osx
   - Press F12 repeatedly for one-time boot-menu and select your usb
   - Choose *install_osx* in clover (preferably boot with -v option)
   - Open *diskutility* and format the partition into HFS+J or apfs and label the partition (eg. macOS)
-  - Using HFS+J instead of apfs on your SSD:
+  - Using HFS+J instead of apfs on your SSD for 10.13.x:
       - Target volume must already be formatted with HFS+J
       - Open *Terminal* from the *Utilities* menu in the macOS installer and type:
         <pre>"/Volumes/Image Volume/Install macOS High Sierra.app/Contents/Resources/startosinstall" --volume <b>the_target_volume</b> --converttoapfs NO --agreetolicense
         </pre>
       - Choose *the_target_volume* depending on how you named your partition (eg. /Volumes/macOS)
+  - Using HFS+J on 10.14 is somewhat buggy right now, better to use APFS
   - System now automatically reboots, boot again into clover, but now select 'Install macOS High Sierra' instead of 'install_osx'
   
 

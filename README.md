@@ -25,7 +25,7 @@ Check [releases](https://github.com/Nihhaar/Hackintosh-Dell7567/releases)
  - 128GB SanDisk M.2 SSD (SATA)
  - 1TB 5400RPM Western Digital HDD
 
-## Creating macOS HighSierra USB
+## Creating macOS HighSierra USB [TODO: Update this section for Mojave]
 
 ```bash
 # Figure out identifier for of your usb (/dev/diskX, for example)
@@ -84,11 +84,11 @@ sudo diskutil rename "Install macOS High Sierra" install_osx
 
 **Configure Clover and your System**
   - Replace the existing config.plist with the config.plist from *“Clover Post-Install Files”*
-  - Add the two EFI drivers from *“Clover Post-Install Files”/drivers64UEFI* to /EFI/CLOVER/drivers64UEFI, and remove VBoxHfs-64.efi from /EFI/CLOVER/drivers64UEFI
-  - Add the included SSDTs in *patched* folder into your *"/EFI/CLOVER/ACPI/patched"* folder
-  - Copy all of the kexts that are located in *Clover Post-Install Files/"Clover/Other kexts"* folder to `<EFI Partition>/EFI/Clover/Other` on your system.
-  - Copy all of the kexts that are located in *Clover Post-Install Files/"/L/E"* folder to `/Library/Extensions` on your system.
-  - Run `Scripts/fixPermissions.sh` as root to fix kext permissions
+  - Add the two EFI drivers from *“Clover Post-Install Files”/drivers64UEFI* to `<EFI Partition>/EFI/CLOVER/drivers64UEFI`, and remove VBoxHfs-64.efi from /EFI/CLOVER/drivers64UEFI
+  - Add the included SSDTs in *patched* folder into your `<EFI Partition>/EFI/CLOVER/ACPI/patched` folder
+  - Copy all of the kexts that are located in *Clover Post-Install Files/"Clover/Other Kexts"* folder to `<EFI Partition>/EFI/Clover/Other` on your system.
+  - Copy all of the kexts that are located in *Clover Post-Install Files/"/L/E Kexts"* folder to `/Library/Extensions` on your system.
+  - Run *Scripts/fixPermissions.sh* from given release as root to fix kext permissions
   - Reboot the laptop and boot with '-f' command line option (press space at clover)
   - Rebuild the cache using `sudo kextcache -i /`
   - Reboot  

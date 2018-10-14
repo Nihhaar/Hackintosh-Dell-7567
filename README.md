@@ -86,8 +86,8 @@ sudo diskutil rename "Install macOS High Sierra" install_osx
   - Replace the existing config.plist with the config.plist from *“Clover Post-Install Files”*
   - Add the two EFI drivers from *“Clover Post-Install Files”/drivers64UEFI* to /EFI/CLOVER/drivers64UEFI, and remove VBoxHfs-64.efi from /EFI/CLOVER/drivers64UEFI
   - Add the included SSDTs in *patched* folder into your *"/EFI/CLOVER/ACPI/patched"* folder
-  - Install all of the kexts that are located in *Clover Post-Install Files/"Clover/Other kexts"* folder to /Library/Extensions using your favorite kext installer.
-  - Copy files from given *"/Library/LaunchDaemons"* folder to /Library/LaunchDaemons and *"/usr/bin"* folder to /usr/bin
+  - Copy all of the kexts that are located in *Clover Post-Install Files/"Clover/Other kexts"* folder to `<EFI Partition>/EFI/Clover/Other` on your system.
+  - Copy all of the kexts that are located in *Clover Post-Install Files/"/L/E"* folder to `/Library/Extensions` on your system.
   - Run `Scripts/fixPermissions.sh` as root to fix kext permissions
   - Reboot the laptop and boot with '-f' command line option (press space at clover)
   - Rebuild the cache using `sudo kextcache -i /`

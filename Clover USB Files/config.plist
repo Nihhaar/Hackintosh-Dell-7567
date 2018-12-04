@@ -230,6 +230,8 @@
 				<data>
 				g32IDw+DpwQ=
 				</data>
+				<key>MatchOS</key>
+				<string>10.13.6</string>
 				<key>Name</key>
 				<string>com.apple.driver.usb.AppleUSBXHCI</string>
 				<key>Replace</key>
@@ -245,7 +247,23 @@
 				g/sPD4MDBQAA
 				</data>
 				<key>MatchOS</key>
-				<string>10.14.x</string>
+				<string>10.14.0</string>
+				<key>Name</key>
+				<string>com.apple.driver.usb.AppleUSBXHCI</string>
+				<key>Replace</key>
+				<data>
+				g/sPkJCQkJCQ
+				</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>disable port limit in XHCI kext (credit DalianSky,Ricky)</string>
+				<key>Find</key>
+				<data>
+				g/sPD4OPBAAA
+				</data>
+				<key>MatchOS</key>
+				<string>10.14.1,10.14.2</string>
 				<key>Name</key>
 				<string>com.apple.driver.usb.AppleUSBXHCI</string>
 				<key>Replace</key>

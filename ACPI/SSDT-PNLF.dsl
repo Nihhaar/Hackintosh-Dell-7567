@@ -1,22 +1,22 @@
 /*
  * Intel ACPI Component Architecture
- * AML/ASL+ Disassembler version 20180313 (64-bit version)(RM)
+ * AML/ASL+ Disassembler version 20180427 (64-bit version)(RM)
  * Copyright (c) 2000 - 2018 Intel Corporation
  * 
  * Disassembling to non-symbolic legacy ASL operators
  *
- * Disassembly of iASLVX4nzA.aml, Sun Apr 22 17:38:31 2018
+ * Disassembly of iASLpdpESY.aml, Fri Dec  7 01:53:09 2018
  *
  * Original Table Header:
  *     Signature        "SSDT"
- *     Length           0x000003D2 (978)
+ *     Length           0x00000404 (1028)
  *     Revision         0x02
- *     Checksum         0x58
+ *     Checksum         0x84
  *     OEM ID           "hack"
  *     OEM Table ID     "_PNLF"
  *     OEM Revision     0x00000000 (0)
  *     Compiler ID      "INTL"
- *     Compiler Version 0x20161210 (538317328)
+ *     Compiler Version 0x20180427 (538444839)
  */
 DefinitionBlock ("", "SSDT", 2, "hack", "_PNLF", 0x00000000)
 {
@@ -181,6 +181,16 @@ DefinitionBlock ("", "SSDT", 2, "hack", "_PNLF", 0x00000000)
                     {
                         Store (0x0AD9, Local2)
                     }
+                    ElseIf (LNotEqual (Ones, Match (Package (0x04)
+                                    {
+                                        0x3E9B, 
+                                        0x3EA5, 
+                                        0x3E92, 
+                                        0x3E91
+                                    }, MEQ, Local0, MTR, Zero, Zero)))
+                    {
+                        Store (0xFFFF, Local2)
+                    }
                     Else
                     {
                         Store (0x056C, Local2)
@@ -245,6 +255,10 @@ DefinitionBlock ("", "SSDT", 2, "hack", "_PNLF", 0x00000000)
             ElseIf (LEqual (Local2, 0x1499))
             {
                 Store (0x12, _UID)
+            }
+            ElseIf (LEqual (Local2, 0xFFFF))
+            {
+                Store (0x13, _UID)
             }
             Else
             {

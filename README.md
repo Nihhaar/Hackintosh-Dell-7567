@@ -135,15 +135,21 @@ sudo pmset -a powernap 0
  - The following makes things somewhat better:
 ```bash
 # Type these commands in terminal and re-login to see the changes
+
 defaults write -g CGFontRenderingFontSmoothingDisabled -bool NO
 defaults -currentHost write -globalDomain AppleFontSmoothing -int 2
 ```
  - If you want to revert back to original settings:
 ```bash
 # Type these commands in terminal and re-login to see the changes
+
 defaults -currentHost delete -globalDomain AppleFontSmoothing
 defaults write -g CGFontRenderingFontSmoothingDisabled -bool YES
 ```
+
+**4) Scrolling is choppy with third party mice**
+ - Use this tool: https://mos.caldis.me/, works well
+ - Scroll direction can also be set via this tool
 
 ## Credits
  - [Rehabman](https://www.tonymacx86.com/members/rehabman.429483/)

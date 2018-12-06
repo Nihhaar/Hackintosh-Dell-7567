@@ -129,6 +129,22 @@ sudo pmset -a powernap 0
  - Make sure kexts are loading properly. Sometimes kexts fail to load due to improper permissions. Use `Scripts/fixPersmissions.sh`
  - If none of the above worked, try posting in forums like tonymacx86.com  
 
+**3) Fonts look blurry in mojave**
+ - Apple nuked subpixel antialiasing in mojave, making non-retina screens blurry
+ - This effect is noticable in 1080p but doesnt affect 4k or retina displays
+ - The following makes things somewhat better:
+```bash
+# Type these commands in terminal and re-login to see the changes
+defaults write -g CGFontRenderingFontSmoothingDisabled -bool NO
+defaults -currentHost write -globalDomain AppleFontSmoothing -int 2
+```
+ - If you want to revert back to original settings:
+```bash
+# Type these commands in terminal and re-login to see the changes
+defaults -currentHost delete -globalDomain AppleFontSmoothing
+defaults write -g CGFontRenderingFontSmoothingDisabled -bool YES
+```
+
 ## Credits
  - [Rehabman](https://www.tonymacx86.com/members/rehabman.429483/)
  - [AGuyWhoIsBored](https://www.tonymacx86.com/members/aguywhoisbored.1105835/)
@@ -143,3 +159,4 @@ sudo pmset -a powernap 0
  - https://www.tonymacx86.com/threads/guide-creating-a-custom-ssdt-for-usbinjectall-kext.211311/
  - https://www.tonymacx86.com/threads/guide-native-power-management-for-laptops.175801/
  - https://www.tonymacx86.com/threads/solved-backlight-turns-to-full-brightness-after-sleep-or-restart.192065/page-4
+ - https://www.reddit.com/r/apple/comments/8wpk18/macos_mojave_nukes_subpixel_antialiasing_making/

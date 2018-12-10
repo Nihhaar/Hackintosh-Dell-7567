@@ -1,7 +1,10 @@
 # Personal Hackintosh Guide/Instructions for Dell 7567
 
 ### Screenshot
-![macOS High Sierra - 10.13.6](https://raw.githubusercontent.com/Nihhaar/Hackintosh-Dell-7567/master/Assets/Screenshot.png)
+![macOS Mojave - 10.14.1](https://raw.githubusercontent.com/Nihhaar/Hackintosh-Dell-7567/master/Assets/Screenshot.png)
+
+### Notice
+This repo is archived as of Dec 11 (macOS version 10.14.2). The files here can still be used for future releases of macOS with just little tweaking and common sense. Be happy to fork it and develop, or I may unarchive it sometime in the future if I used macOS on this laptop again.
 
 ### Download Required Files
 Check [releases](https://github.com/Nihhaar/Hackintosh-Dell7567/releases)

@@ -1,10 +1,10 @@
 # Personal Hackintosh Guide/Instructions for Dell 7567
 
-### Screenshot
-![macOS Mojave - 10.14.1](https://raw.githubusercontent.com/Nihhaar/Hackintosh-Dell-7567/master/Assets/Screenshot.png)
-
 ### Notice
 This repo is archived as of Dec 11 (macOS version 10.14.2). The files here can still be used for future releases of macOS with just little tweaking and common sense. Be happy to fork it and develop, or I may unarchive it sometime in the future if I used macOS on this laptop again.
+
+### Screenshot
+![macOS Mojave - 10.14.1](https://raw.githubusercontent.com/Nihhaar/Hackintosh-Dell-7567/master/Assets/Screenshot.png)
 
 ### Download Required Files
 Check [releases](https://github.com/Nihhaar/Hackintosh-Dell7567/releases)
@@ -87,6 +87,15 @@ Clover Post-Install Files:
  - 15.6” 1080p IPS Display
  - 128GB SanDisk M.2 SSD (SATA)
  - 1TB 5400RPM Western Digital HDD
+
+### Prerequisites
+ - Set BIOS options properly:
+   - Disable Legacy Option ROMs
+   - Change SATA operation to AHCI (If already using windows, google how to)
+   - Disable Secure Boot
+   - VT for Direct I/O (VT-d) is disabled
+ - USB with >= 16GB, preferably USB 2.0 (3.0 is known to cause problems)
+ - common_sense.exe
 
 ## Creating macOS USB
 
